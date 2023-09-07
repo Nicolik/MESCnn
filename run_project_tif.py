@@ -6,8 +6,8 @@ import subprocess
 from definitions import ROOT_DIR
 from classification.gutils.config import OxfordModelNameCNN
 from detection.model.config import SegmentationModelName
-from detection.qupath.config import PathMESCnn, PathWSI
-from detection.qupath.download import download_project
+from detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
+from detection.qupath.download import download_project, download_slide, sanitize_qupath_project
 
 # Tests
 download_qp = True
@@ -20,14 +20,21 @@ test_classify = True
 
 
 qupath_empty_dir = PathWSI.QUPATH_MESCnn_DIR_NOANN
-if download_qp:
-    if not os.path.exists(qupath_empty_dir):
-        download_project(PathWSI.MESCnn_DATASET)
-
 detection_model = SegmentationModelName.CASCADE_R_50_FPN_1x
 path_to_export = os.path.join(PathWSI.MESCnn_EXPORT, detection_model)
 qupath_segm_dir = os.path.join(path_to_export, 'QuPathProject')
 wsi_tiff_dir = PathWSI.MESCnn_WSI
+
+if download_qp:
+    if not os.path.exists(qupath_empty_dir):
+        download_project(PathWSI.MESCnn_DATASET)
+    for wsi in get_test_wsis():
+        wsi_id = os.path.basename(wsi)
+        path_to_wsi_file = os.path.join(wsi_tiff_dir, wsi_id)
+        if not os.path.exists(path_to_wsi_file):
+            logging.info(f"Downloading {wsi_id}...")
+            download_slide(wsi_id, os.path.dirname(wsi_tiff_dir))
+    sanitize_qupath_project(qupath_empty_dir)
 
 logging.info(f"QuPathProject: {qupath_segm_dir}")
 if test_segment_project:
@@ -41,7 +48,6 @@ if test_segment_project:
                     "--export", path_to_export,
                     "--qupath", qupath_segm_dir,
                     "--model", detection_model,
-                    "--do-download", str(download_qp),
                     "--do-segment", str(test_segment),
                     "--do-tiling", str(test_tile)])
 else:

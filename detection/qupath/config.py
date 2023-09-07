@@ -35,6 +35,15 @@ class PathWSI:
     MESCnn_WSI_SZEGED = os.path.join(MESCnn_WSI, 'szeged_sample_slide.ome.tif')
 
 
+def get_test_wsis():
+    return [
+        PathWSI.MESCnn_WSI_BARI,
+        PathWSI.MESCnn_WSI_COLOGNE,
+        PathWSI.MESCnn_WSI_COLOGNE_2,
+        PathWSI.MESCnn_WSI_SZEGED
+    ]
+
+
 class GlomerulusDetection(IntEnum):
     BACKGROUND = 0
     GLOMERULUS = 1

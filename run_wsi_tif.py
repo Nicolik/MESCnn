@@ -5,15 +5,10 @@ import subprocess
 from definitions import ROOT_DIR
 from classification.gutils.config import OxfordModelNameCNN
 from detection.model.config import SegmentationModelName
-from detection.qupath.config import PathMESCnn, PathWSI
+from detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
 from detection.qupath.download import download_slide
 
-wsis = [
-    PathWSI.MESCnn_WSI_BARI,
-    PathWSI.MESCnn_WSI_COLOGNE,
-    PathWSI.MESCnn_WSI_COLOGNE_2,
-    PathWSI.MESCnn_WSI_SZEGED
-]
+wsis = get_test_wsis()
 
 # Tests
 download_slides = True

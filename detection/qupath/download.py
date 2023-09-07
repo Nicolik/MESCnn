@@ -44,3 +44,11 @@ def download_dataset(repo_id, filename, local_dir, do_unzip=False):
         os.remove(zip_path)
         print(f"Unzip done! Check: {local_dir}")
     return zip_path
+
+
+def sanitize_qupath_project(qp_dir):
+    from paquo.projects import QuPathProject
+    with QuPathProject(qp_dir, mode='a+') as qp:
+        print(f"Created Project {qp.name}!")
+        qp.update_image_paths(try_relative=True)
+        print("Updated Image Paths!")
