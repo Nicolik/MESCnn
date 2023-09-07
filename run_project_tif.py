@@ -18,7 +18,6 @@ test_qu2json = True
 test_json2exp = True
 test_classify = True
 
-
 qupath_empty_dir = PathWSI.QUPATH_MESCnn_DIR_NOANN
 detection_model = SegmentationModelName.CASCADE_R_50_FPN_1x
 path_to_export = os.path.join(PathWSI.MESCnn_EXPORT, detection_model)

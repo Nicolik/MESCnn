@@ -50,5 +50,12 @@ def sanitize_qupath_project(qp_dir):
     from paquo.projects import QuPathProject
     with QuPathProject(qp_dir, mode='a+') as qp:
         print(f"Created Project {qp.name}!")
+
+        for i, image in enumerate(qp.images):
+            print(f"{i} URI: {image.uri}")
+
         qp.update_image_paths(try_relative=True)
         print("Updated Image Paths!")
+
+        for i, image in enumerate(qp.images):
+            print(f"{i} URI: {image.uri}")
