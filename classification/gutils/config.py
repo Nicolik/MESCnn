@@ -1,0 +1,25 @@
+class OxfordModelNameCNN:
+    EfficientNet_V2_S = "efficientnetv2-s"
+    EfficientNet_V2_M = "efficientnetv2-m"
+    EfficientNet_V2_L = "efficientnetv2-l"
+    ResNeXt50_32X4D = "resnext"
+    VGG16 = "vgg16"
+    DenseNet121 = "densenet121"
+    DenseNet161 = "densenet161"
+    ResNet34 = "resnet34"
+    ResNet50 = "resnet50"
+    ResNet101 = "resnet101"
+    MobileNet_V2 = "mobilenetv2"
+    SqueezeNet1_0 = "squeezenet"
+    Inception_V3 = "inceptionv3"
+
+
+class OxfordModelNameViT:
+    PretrainedViTB16 = "PretrainedViTB16"
+    PretrainedViTB32 = "PretrainedViTB32"
+    PretrainedViTL16 = "PretrainedViTL16"
+    PretrainedViTL32 = "PretrainedViTL32"
+    PretrainedViTB16_IMAGENET1K = "PretrainedViTB16Imagenet1k"
+    PretrainedViTB32_IMAGENET1K = "PretrainedViTB32Imagenet1k"
+    PretrainedViTL16_IMAGENET1K = "PretrainedViTL16Imagenet1k"
+    PretrainedViTL32_IMAGENET1K = "PretrainedViTL32Imagenet1k"

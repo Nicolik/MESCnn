@@ -1,0 +1,6 @@
+/detection/logs*
+/detectron2/
+/classification/logs*
+/test/detection/metrics/images/
+/Data/
+/.paquo.toml
