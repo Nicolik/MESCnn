@@ -1,6 +1,7 @@
 # MESCnn
-This repository contains an end-to-end pipeline, which we named MESCnn 
-(MESC classification by neural network), for glomerular Oxford classification of WSIs.
+This repository contains an end-to-end pipeline, which we named *MESCnn* 
+(*MESC* classification by *n*eural *n*etwork), for glomerular Oxford classification of 
+whole slide images.
 
 The Oxford Classification for IgA nephropathy is the most successful example of an
 evidence-based nephropathology classification system. 
@@ -10,6 +11,8 @@ deep learning pipeline that involves automatic glomerular segmentation
 followed by classification for mesangial hypercellularity (M), 
 endocapillary hypercellularity (E), segmental sclerosis (S) and active crescents (C).
 
+## Installation
+In order to install the dependencies required to run MESCnn, check [INSTALL.md](INSTALL.md).
 
 ## Associated Data
 The source code is associated with:
