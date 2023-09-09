@@ -1,0 +1,44 @@
+# paquo's default configuration
+# =============================
+# format: TOML
+
+# if set will skip search and try to use qupath from there:
+qupath_dir = "path_to_QuPath"
+
+# default search paths for qupath
+qupath_search_dirs = [
+  "/opt",  # linux
+  "/Applications",  # macos
+  "c:/Program Files",  # win
+  "/usr/local",  # linux
+  "~/Applications",  # macos
+  "~/AppData/Local",  # win
+  "~",
+]
+# used to match qupath_dirs during search
+qupath_search_dir_regex = "(?i)qupath.*"
+# search for the qupath conda package?
+qupath_search_conda = true
+# prefer the qupath conda package?
+qupath_prefer_conda = true
+
+# options passed to the JVM.
+# - one option per string item
+java_opts = [
+  "-XX:MaxRAMPercentage=50",
+]
+
+# paquo options
+safe_truncate = true
+
+# allows to use a different jvm_path for running qupath
+jvm_path_override = ""
+
+# internal settings
+# -----------------
+# allows building the docs without qupath
+mock_backend = false
+# only show paquo errors on cli
+cli_force_log_level_error = true
+# on windows warn about microsoft store python
+warn_microsoft_store_python = true

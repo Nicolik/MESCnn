@@ -1,0 +1,10 @@
+openslide-python
+python-javabridge
+paquo
+python-bioformats
+tqdm
+pandas
+opencv-python
+torch==1.13.1
+torchvision==0.14.1
+huggingface-hub
