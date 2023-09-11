@@ -104,6 +104,7 @@ def config_dataset_all_training(cfg):
     cfg.DATASETS.TRAIN = [DetectronDataset.TRAIN_GLOMERULI,
                           DetectronDataset.TEST_GLOMERULI,
                           DetectronDataset.EXT_VAL_GLOMERULI]
+    cfg.DATASETS.TEST = []
 
 
 def set_config(cfg, train_config):
