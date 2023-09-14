@@ -11,6 +11,20 @@ deep learning pipeline that involves automatic glomerular segmentation
 followed by classification for mesangial hypercellularity (M), 
 endocapillary hypercellularity (E), segmental sclerosis (S) and active crescents (C).
 
+If you find this repository useful for your research, please cite our paper in *Computer Methods and Programs in Biomedicine*:
+```
+@article{ALTINI2023107814,
+title = {Performance and Limitations of a Supervised Deep Learning Approach for the Histopathological Oxford Classification of Glomeruli with IgA Nephropathy},
+journal = {Computer Methods and Programs in Biomedicine},
+pages = {107814},
+year = {2023},
+issn = {0169-2607},
+doi = {https://doi.org/10.1016/j.cmpb.2023.107814},
+url = {https://www.sciencedirect.com/science/article/pii/S0169260723004807},
+author = {Nicola Altini and Michele Rossini and Sándor Turkevi-Nagy and Francesco Pesce and Paola Pontrelli and Berardino Prencipe and Francesco Berloco and Surya Seshan and Jean-Baptiste Gibier and Anibal Pedraza Dorado and Gloria Bueno and Licia Peruzzi and Mattia Rossi and Albino Eccher and Feifei Li and Adamantios Koumpis and Oya Beyan and Jonathan Barratt and Huy Quoc Vo and Chandra Mohan and Hien Van Nguyen and Pietro Antonio Cicalese and Angela Ernst and Loreto Gesualdo and Vitoantonio Bevilacqua and Jan Ulrich Becker},
+}
+```
+
 ## Installation
 In order to install the dependencies required to run MESCnn, check [INSTALL.md](INSTALL.md).
 
