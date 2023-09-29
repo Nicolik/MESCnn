@@ -60,6 +60,10 @@ CLI_MODEL_NAME_DICT = {
 }
 
 
+def get_detection_models():
+    return list(CLI_MODEL_NAME_DICT.keys())
+
+
 class DetectronDataset:
     TRAIN_GLOMERULI = "Glomeruli_Detection_Train"
     TEST_GLOMERULI = "Glomeruli_Detection_Test"

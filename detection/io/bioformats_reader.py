@@ -9,7 +9,7 @@ import numpy as np
 import cv2
 
 from detection.io.config import OP_EPS, check_desired_op
-from detection.qupath.utils import find_nearest
+from detection.qupath.utils import find_nearest, crop
 
 
 class BioformatsReader(object):
@@ -42,10 +42,10 @@ class BioformatsReader(object):
             print(f"C, T = {self.reader.rdr.getSizeC()}, {self.reader.rdr.getSizeT()}")
         print(f"Indexes: {self.indexes}")
 
-    def read_resolution(self, s, x, y, w, h, desired_op=40, read_bgr=False, do_rescale=True):
+    def read_resolution(self, s, x, y, w, h, desired_op, read_bgr=False, do_rescale=True):
         objective_powers = self.objective_powers[s]
         closest_level, closest_op = find_nearest(objective_powers, desired_op)
-        print(f"[read_resolution] Closest Level: {closest_level}, Closest OP: {closest_op}")
+        print(f"[read_resolution] Desired OP: {desired_op}, Closest Level: {closest_level}, Closest OP: {closest_op}")
         assert check_desired_op(closest_op, desired_op), "Mismatch between closest OP and desired OP"
         self.reader.rdr.setSeries(s+closest_level)
         X, Y, Z = self.reader.rdr.getSizeX(), self.reader.rdr.getSizeY(), self.reader.rdr.getSizeZ()
@@ -55,9 +55,16 @@ class BioformatsReader(object):
         rescale_factor = self.objective_power / closest_op
         self._rescale_factor = rescale_factor
         if do_rescale:
-            print(f"[read_resolution] Before Rescaling: [{x}, {y}, {w}, {h}]")
+            print(f"[read_resolution] Before Rescaling: [X={X}, Y={Y}] [{x}, {y}, {w}, {h}]")
             x, y, w, h = int(x/rescale_factor), int(y/rescale_factor), int(w/rescale_factor), int(h/rescale_factor)
+            X, Y = int(X/rescale_factor), int(Y/rescale_factor)
+            print(f"[read_resolution] After Rescaling:  [X={X}, Y={Y}] [{x}, {y}, {w}, {h}]")
         try:
+            print(f"[read_resolution] Trying to open [{x}, {y}, {w}, {h}]. [X={X}, Y={Y}]. [x+w={x+w}, y+h={y+h}]")
+            if desired_op == 40:
+                print(f"[read_resolution] Before Crop: {x}-{x+w} ({X}), {y}-{y+h} ({Y})")
+                x, y, w, h = crop(x, y, w, h, X, Y)
+                print(f"[read_resolution] After Crop:  {x}-{x+w} ({X}), {y}-{y+h} ({Y})")
             image = self.reader.rdr.openBytesXYWH(0, x, y, w, h)
             image = image.reshape(3, h, w)
             image = np.transpose(image, (1, 2, 0))

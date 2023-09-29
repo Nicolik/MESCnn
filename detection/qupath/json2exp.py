@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
         if reader_type in [ReaderType.SCN, ReaderType.OME_TIFF]:
             image_os = BioformatsReader(path_to_wsi)
-            orig = image_os.read_resolution(image_os.indexes[idx_s], x, y, xsize, ysize)
+            orig = image_os.read_resolution(image_os.indexes[idx_s], x, y, xsize, ysize, 40)
         elif reader_type in [ReaderType.NDPI, ReaderType.SVS, ReaderType.MRXS, ReaderType.TIFF]:
             image_os = OpenslideReader(path_to_wsi)
             orig = image_os.read_region((x, y), 0, (xsize, ysize))

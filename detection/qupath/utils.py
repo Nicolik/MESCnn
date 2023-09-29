@@ -12,15 +12,40 @@ def tile_region(roi, tile_size, tile_stride):
 
     tiles = []
     for xx in range(x, x+w, stride_x):
+        if xx + size_x > x+w:
+            size_x_ = x+w - xx
+        else:
+            size_x_ = size_x
         for yy in range(y, y+h, stride_y):
-            tiles.append([xx, yy, size_x, size_y])
+            if yy + size_y > y+h:
+                size_y_ = y+h - yy
+            else:
+                size_y_ = size_y
+            tiles.append([xx, yy, size_x_, size_y_])
     return tiles
 
 
 def find_nearest(array, value):
     array = np.asarray(array)
+    print(f"[find_nearest] array: {array}, value: {value}")
     idx = (np.abs(array - value)).argmin()
     return idx, array[idx]
+
+
+def crop(x, y, w, h, X, Y):
+    if x < 0:
+        x = 0
+    elif x > X:
+        x = X - 1
+    if y < 0:
+        y = 0
+    elif y > Y:
+        y = Y - 1
+    if x + w > X:
+        w = X - x
+    if y + h > Y:
+        h = Y - y
+    return x, y, w, h
 
 
 def PIL2cv2(PIL_image):

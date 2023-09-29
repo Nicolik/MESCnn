@@ -30,6 +30,7 @@ class PathWSI:
 
     MESCnn_WSI = os.path.join(MESCnn_DATASET, 'WSI')
     MESCnn_WSI_BARI = os.path.join(MESCnn_WSI, 'bari_sample_slide.ome.tif')
+    MESCnn_WSI_BARI_OPENSLIDE = os.path.join(MESCnn_WSI, 'bari-example-test-slide.tif')
     MESCnn_WSI_COLOGNE = os.path.join(MESCnn_WSI, 'cologne_sample_slide.ome.tif')
     MESCnn_WSI_COLOGNE_2 = os.path.join(MESCnn_WSI, 'cologne_sample_slide_2.ome.tif')
     MESCnn_WSI_SZEGED = os.path.join(MESCnn_WSI, 'szeged_sample_slide.ome.tif')
@@ -38,6 +39,7 @@ class PathWSI:
 def get_test_wsis():
     return [
         PathWSI.MESCnn_WSI_BARI,
+        # PathWSI.MESCnn_WSI_BARI_OPENSLIDE,
         PathWSI.MESCnn_WSI_COLOGNE,
         PathWSI.MESCnn_WSI_COLOGNE_2,
         PathWSI.MESCnn_WSI_SZEGED
