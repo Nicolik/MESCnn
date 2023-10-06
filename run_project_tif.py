@@ -2,7 +2,6 @@ import os
 import shutil
 import logging
 import subprocess
-os.environ['PATH'] = r'C:\Program Files\openslide-win64-20220811\bin' + ";" + os.environ['PATH']
 from definitions import ROOT_DIR
 from mescnn.classification.gutils.config import OxfordModelNameCNN
 from mescnn.detection.model.config import SegmentationModelName
