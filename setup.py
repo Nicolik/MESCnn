@@ -1,3 +1,4 @@
+import os
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -5,6 +6,8 @@ with open("README.md", "r") as fh:
 
 with open('requirements.txt') as f:
     required = f.read().splitlines()
+
+os.system("pip install numpy cached-property")
 
 setuptools.setup(
     name='MESCnn',
@@ -15,6 +18,7 @@ setuptools.setup(
     url='https://github.com/Nicolik/MESCnn',
     python_requires='>=3.7',
     packages=setuptools.find_packages(),
-    setup_requires=['numpy', 'cached-property'],
     install_requires=required,
 )
+
+os.system("python -m pip install 'git+https://github.com/facebookresearch/detectron2.git")
