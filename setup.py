@@ -1,4 +1,5 @@
 import os
+import sys
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -21,4 +22,6 @@ setuptools.setup(
     install_requires=required,
 )
 
+if 'win' in sys.platform:
+    os.system("pip install fvcore cloudpickle omegaconf pycocotools fairscale timm")
 os.system("python -m pip install 'git+https://github.com/facebookresearch/detectron2.git")
