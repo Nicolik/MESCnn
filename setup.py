@@ -9,6 +9,7 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 os.system("pip install numpy cached-property")
+os.system("pip install torch==1.13.1 torchvision==0.14.1 --index-url https://download.pytorch.org/whl/cu117")
 
 setuptools.setup(
     name='MESCnn',

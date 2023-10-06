@@ -43,7 +43,12 @@ two following packages:
 pip install numpy cached-property
 ```
 
-and then installing all the other requirements:
+Then, install PyTorch with CUDA support:
+```
+pip install torch==1.13.1 torchvision==0.14.1 --index-url https://download.pytorch.org/whl/cu117
+```
+
+Lastly, install all the other requirements:
 ```
 pip install -r requirements.txt
 ```
