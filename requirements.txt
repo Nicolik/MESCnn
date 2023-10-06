@@ -8,3 +8,4 @@ opencv-python
 torch==1.13.1
 torchvision==0.14.1
 huggingface-hub
+git+https://github.com/facebookresearch/detectron2.git

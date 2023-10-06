@@ -15,5 +15,6 @@ setuptools.setup(
     url='https://github.com/Nicolik/MESCnn',
     python_requires='>=3.7',
     packages=setuptools.find_packages(),
+    setup_requires=['numpy', 'cached-property'],
     install_requires=required,
 )
