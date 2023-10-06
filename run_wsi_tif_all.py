@@ -4,10 +4,10 @@ import subprocess
 import shutil
 
 from definitions import ROOT_DIR
-from classification.gutils.config import OxfordModelNameCNN
-from detection.model.config import get_detection_models
-from detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
-from detection.qupath.download import download_slide
+from mescnn.classification.gutils.config import OxfordModelNameCNN
+from mescnn.detection.model.config import get_detection_models
+from mescnn.detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
+from mescnn.detection.qupath.download import download_slide
 
 wsis = get_test_wsis()
 detection_models = get_detection_models()

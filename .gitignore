@@ -3,4 +3,6 @@
 /classification/logs*
 /test/detection/metrics/images/
 /Data/
+/build/
+/MESCnn.egg-info/
 /.paquo.toml

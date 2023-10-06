@@ -4,14 +4,14 @@ import torch
 from PIL import Image
 import pandas as pd
 
-from classification.gutils.utils import get_proper_device, str2bool
-from classification.inference.mesc.oxford import binarize, oxfordify
-from classification.inference.mesc.download import download_classifier
-from classification.inference.mesc.encoding import mesc_def
-from classification.inference.mesc.threshold import opt_thr
-from classification.inference.mesc.config import (GlomeruliTestConfig, GlomeruliTestConfig3,
+from mescnn.classification.gutils.utils import get_proper_device, str2bool
+from mescnn.classification.inference.oxford import binarize, oxfordify
+from mescnn.classification.inference.download import download_classifier
+from mescnn.classification.inference.encoding import mesc_def
+from mescnn.classification.inference.threshold import opt_thr
+from mescnn.classification.inference.config import (GlomeruliTestConfig, GlomeruliTestConfig3,
                                                   GlomeruliTestConfigViT, GlomeruliTestConfigViT3)
-from classification.inference.mesc.paths import get_logs_path
+from mescnn.classification.inference.paths import get_logs_path
 from definitions import ROOT_DIR
 
 

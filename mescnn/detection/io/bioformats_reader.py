@@ -8,8 +8,8 @@ import bioformats.formatreader
 import numpy as np
 import cv2
 
-from detection.io.config import OP_EPS, check_desired_op
-from detection.qupath.utils import find_nearest, crop
+from mescnn.detection.io.config import OP_EPS, check_desired_op
+from mescnn.detection.qupath.utils import find_nearest, crop
 
 
 class BioformatsReader(object):

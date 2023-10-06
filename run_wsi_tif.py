@@ -3,10 +3,10 @@ import logging
 import subprocess
 
 from definitions import ROOT_DIR
-from classification.gutils.config import OxfordModelNameCNN
-from detection.model.config import SegmentationModelName
-from detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
-from detection.qupath.download import download_slide
+from mescnn.classification.gutils.config import OxfordModelNameCNN
+from mescnn.detection.model.config import SegmentationModelName
+from mescnn.detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
+from mescnn.detection.qupath.download import download_slide
 
 wsis = get_test_wsis()
 

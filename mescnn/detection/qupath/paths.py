@@ -1,6 +1,6 @@
 import os
 
-from detection.qupath.utils import ReaderType
+from mescnn.detection.qupath.utils import ReaderType
 
 
 def get_mrxs_dir(image_name):

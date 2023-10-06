@@ -9,11 +9,11 @@ from PIL import Image, ImageDraw
 import javabridge
 import bioformats
 
-from classification.gutils.image import apply_mask_crop
-from detection.io.bioformats_reader import BioformatsReader
-from detection.io.openslide_reader import OpenslideReader
-from detection.qupath.paths import get_reader_type
-from detection.qupath.utils import ReaderType
+from mescnn.classification.gutils.image import apply_mask_crop
+from mescnn.detection.io.bioformats_reader import BioformatsReader
+from mescnn.detection.io.openslide_reader import OpenslideReader
+from mescnn.detection.qupath.paths import get_reader_type
+from mescnn.detection.qupath.utils import ReaderType
 
 
 if __name__ == '__main__':

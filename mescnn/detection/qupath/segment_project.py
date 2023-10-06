@@ -2,10 +2,10 @@ import os
 import subprocess
 import logging
 
-from classification.gutils.utils import str2bool
-from detection.model.config import DEFAULT_SEGMENTATION_MODEL
-from detection.qupath.config import PathMESCnn, MAGNIFICATION
-from detection.qupath.utils import qupath2list
+from mescnn.classification.gutils.utils import str2bool
+from mescnn.detection.model.config import DEFAULT_SEGMENTATION_MODEL
+from mescnn.detection.qupath.config import PathMESCnn, MAGNIFICATION
+from mescnn.detection.qupath.utils import qupath2list
 
 if __name__ == '__main__':
     import argparse

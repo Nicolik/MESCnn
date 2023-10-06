@@ -10,15 +10,15 @@ DETECTRON_SCORE_THRESHOLD = 0.5
 
 
 class PathMESCnn:
-    SEGMENT_PROJECT = os.path.join(ROOT_DIR, "detection", "qupath", "segment_project.py")
-    TILE = os.path.join(ROOT_DIR, "detection", "qupath", "tile.py")
-    SEGMENT = os.path.join(ROOT_DIR, "detection", "qupath", "segment.py")
-    PKL2QU = os.path.join(ROOT_DIR, "detection", "qupath", "pkl2qu.py")
-    QU2JSON = os.path.join(ROOT_DIR, "detection", "qupath", "qu2json.py")
-    JSON2EXP = os.path.join(ROOT_DIR, "detection", "qupath", "json2exp.py")
-    INFERENCE = os.path.join(ROOT_DIR, "detection", "model", "inference.py")
-    CLASSIFY = os.path.join(ROOT_DIR, "classification", "inference", "mesc", "classify.py")
-    COLLATE_CLASSIFY = os.path.join(ROOT_DIR, "classification", "inference", "mesc", "collate_classify.py")
+    SEGMENT_PROJECT = os.path.join(ROOT_DIR, "mescnn", "detection", "qupath", "segment_project.py")
+    TILE = os.path.join(ROOT_DIR, "mescnn", "detection", "qupath", "tile.py")
+    SEGMENT = os.path.join(ROOT_DIR, "mescnn", "detection", "qupath", "segment.py")
+    PKL2QU = os.path.join(ROOT_DIR, "mescnn", "detection", "qupath", "pkl2qu.py")
+    QU2JSON = os.path.join(ROOT_DIR, "mescnn", "detection", "qupath", "qu2json.py")
+    JSON2EXP = os.path.join(ROOT_DIR, "mescnn", "detection", "qupath", "json2exp.py")
+    INFERENCE = os.path.join(ROOT_DIR, "mescnn", "detection", "model", "inference.py")
+    CLASSIFY = os.path.join(ROOT_DIR, "mescnn", "classification", "inference", "classify.py")
+    COLLATE_CLASSIFY = os.path.join(ROOT_DIR, "classification", "inference", "collate_classify.py")
 
 
 class PathWSI:

@@ -1,7 +1,7 @@
 import os
 import cv2
 import shutil
-from detection.qupath.utils import tile_region, is_foreground, is_black
+from mescnn.detection.qupath.utils import tile_region, is_foreground, is_black
 
 
 def dir_name_from_wsi(path):

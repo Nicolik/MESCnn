@@ -20,9 +20,9 @@ if __name__ == '__main__':
     print("JVM started!")
 
     print("Loading local libraries...")
-    from detection.io.bioformats_reader import BioformatsReader
-    from detection.io.openslide_reader import OpenslideReader
-    from detection.qupath.tiling import WholeTilerOpenslide, WholeTilerBioformats
+    from mescnn.detection.io.bioformats_reader import BioformatsReader
+    from mescnn.detection.io.openslide_reader import OpenslideReader
+    from mescnn.detection.qupath.tiling import WholeTilerOpenslide, WholeTilerBioformats
     print("Local libraries loaded!")
 
     path_to_wsi = args.wsi

@@ -5,8 +5,8 @@ import numpy as np
 from paquo.projects import QuPathProject
 import shapely
 import pandas as pd
-from detection.qupath.config import GlomerulusDetection, init_data_dict, MIN_AREA_BBOX_GLOMERULUS
-from detection.qupath.paths import path_image_data
+from mescnn.detection.qupath.config import GlomerulusDetection, init_data_dict, MIN_AREA_BBOX_GLOMERULUS
+from mescnn.detection.qupath.paths import path_image_data
 
 
 if __name__ == '__main__':

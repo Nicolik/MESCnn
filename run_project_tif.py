@@ -2,12 +2,12 @@ import os
 import shutil
 import logging
 import subprocess
-
+os.environ['PATH'] = r'C:\Program Files\openslide-win64-20220811\bin' + ";" + os.environ['PATH']
 from definitions import ROOT_DIR
-from classification.gutils.config import OxfordModelNameCNN
-from detection.model.config import SegmentationModelName
-from detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
-from detection.qupath.download import download_project, download_slide, sanitize_qupath_project
+from mescnn.classification.gutils.config import OxfordModelNameCNN
+from mescnn.detection.model.config import SegmentationModelName
+from mescnn.detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
+from mescnn.detection.qupath.download import download_project, download_slide, sanitize_qupath_project
 
 # Tests
 download_qp = True

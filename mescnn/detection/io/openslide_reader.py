@@ -3,8 +3,8 @@ import numpy as np
 import cv2
 import openslide
 
-from detection.io.config import check_desired_op
-from detection.qupath.utils import find_nearest, PIL2cv2
+from mescnn.detection.io.config import check_desired_op
+from mescnn.detection.qupath.utils import find_nearest, PIL2cv2
 
 
 class OpenslideReader(object):

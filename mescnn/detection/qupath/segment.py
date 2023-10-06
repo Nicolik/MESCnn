@@ -11,12 +11,12 @@ from detectron2.engine import DefaultPredictor
 
 print("Loading local libraries...")
 from definitions import ROOT_DIR
-from detection.model.config import build_model_config, CLI_MODEL_NAME_DICT, set_config, DEFAULT_SEGMENTATION_MODEL
-from detection.qupath.config import MIN_AREA_GLOMERULUS_UM, DETECTRON_SCORE_THRESHOLD, PathMESCnn
-from detection.qupath.utils import get_dataset_dicts_validation, tile2xywh, mask2polygon, get_area_10x
-from detection.qupath.nms import nms
-from detection.qupath.tiling import dir_name_from_wsi
-from detection.qupath.download import download_detector
+from mescnn.detection.model.config import build_model_config, CLI_MODEL_NAME_DICT, set_config, DEFAULT_SEGMENTATION_MODEL
+from mescnn.detection.qupath.config import MIN_AREA_GLOMERULUS_UM, DETECTRON_SCORE_THRESHOLD, PathMESCnn
+from mescnn.detection.qupath.utils import get_dataset_dicts_validation, tile2xywh, mask2polygon, get_area_10x
+from mescnn.detection.qupath.nms import nms
+from mescnn.detection.qupath.tiling import dir_name_from_wsi
+from mescnn.detection.qupath.download import download_detector
 print("Local libraries loaded!")
 
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     undersampling = args.undersampling
 
-    model_folder = os.path.join(ROOT_DIR, 'detection', 'logs', model_name, config_dir)
+    model_folder = os.path.join(ROOT_DIR, 'mescnn', 'detection', 'logs', model_name, config_dir)
     logs_dir = os.path.join(model_folder, 'output')
     path_to_weights = os.path.join(logs_dir, "model_final.pth")
     if not os.path.exists(path_to_weights):
