@@ -10,7 +10,7 @@ import subprocess
 from detectron2.engine import DefaultPredictor
 
 print("Loading local libraries...")
-from definitions import ROOT_DIR
+from mescnn.definitions import ROOT_DIR
 from mescnn.detection.model.config import build_model_config, CLI_MODEL_NAME_DICT, set_config, DEFAULT_SEGMENTATION_MODEL
 from mescnn.detection.qupath.config import MIN_AREA_GLOMERULUS_UM, DETECTRON_SCORE_THRESHOLD, PathMESCnn
 from mescnn.detection.qupath.utils import get_dataset_dicts_validation, tile2xywh, mask2polygon, get_area_10x

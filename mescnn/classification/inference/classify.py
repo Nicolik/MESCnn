@@ -12,7 +12,7 @@ from mescnn.classification.inference.threshold import opt_thr
 from mescnn.classification.inference.config import (GlomeruliTestConfig, GlomeruliTestConfig3,
                                                   GlomeruliTestConfigViT, GlomeruliTestConfigViT3)
 from mescnn.classification.inference.paths import get_logs_path
-from definitions import ROOT_DIR
+from mescnn.definitions import ROOT_DIR
 
 
 if __name__ == '__main__':

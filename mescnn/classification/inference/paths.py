@@ -1,5 +1,5 @@
 import os
-from definitions import ROOT_DIR
+from mescnn.definitions import ROOT_DIR
 
 
 def get_logs_path(root_dir=None):

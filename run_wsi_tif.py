@@ -2,7 +2,7 @@ import os
 import logging
 import subprocess
 
-from definitions import ROOT_DIR
+from mescnn.definitions import ROOT_DIR
 from mescnn.classification.gutils.config import OxfordModelNameCNN
 from mescnn.detection.model.config import SegmentationModelName
 from mescnn.detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis
@@ -19,7 +19,7 @@ test_json2exp = True
 test_classify = True
 
 wsi_tiff_dir = PathWSI.MESCnn_WSI
-detection_model = SegmentationModelName.CASCADE_R_50_FPN_1x
+detection_model = SegmentationModelName.CASCADE_R_50_FPN_3x
 path_to_export = os.path.join(PathWSI.MESCnn_EXPORT, detection_model)
 qupath_segm_dir = os.path.join(path_to_export, 'QuPathProject')
 

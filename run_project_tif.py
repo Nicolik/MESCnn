@@ -2,7 +2,8 @@ import os
 import shutil
 import logging
 import subprocess
-from definitions import ROOT_DIR
+
+from mescnn.definitions import ROOT_DIR
 from mescnn.classification.gutils.config import OxfordModelNameCNN
 from mescnn.detection.model.config import SegmentationModelName
 from mescnn.detection.qupath.config import PathMESCnn, PathWSI, get_test_wsis

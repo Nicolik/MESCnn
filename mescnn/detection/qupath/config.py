@@ -1,7 +1,7 @@
 import os
 from enum import IntEnum
 
-from definitions import ROOT_DIR
+from mescnn.definitions import ROOT_DIR
 
 MAGNIFICATION = 40
 MIN_AREA_GLOMERULUS_UM = 5000
