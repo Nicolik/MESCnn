@@ -1,7 +1,6 @@
-/detection/logs*
 /detectron2/
-/classification/logs*
-/test/detection/metrics/images/
+/mescnn/detection/logs*
+/mescnn/classification/logs*
 /Data/
 /build/
 /MESCnn.egg-info/
