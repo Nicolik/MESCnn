@@ -82,7 +82,7 @@ if __name__ == '__main__':
             logging.error(f"[json2exp] Tile [{x}, {y}, {xsize}, {ysize}] from '{path_to_wsi}' returns None!")
             continue
 
-        wsi_id = row['image-id']
+        wsi_id = str(row['image-id'])
         subdir_original = os.path.join(path_to_original, wsi_id)
         os.makedirs(subdir_original, exist_ok=True)
         subdir_mask = os.path.join(path_to_mask, wsi_id)
